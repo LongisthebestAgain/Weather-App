@@ -23,9 +23,10 @@ async function checkWeather(city) {
             document.querySelector(".weather-icon").setAttribute("src", "./Element/sun.png")
 
         }
-        else if (data.weather[0].main == "Rain") {
+        else if (data.weather[1].main == "Rain" || data.weather[0].main == "Thunderstorm") {
             document.querySelector(".weather-icon").setAttribute("src", "./Element/storm.png")
             document.querySelector(".card").classList.add("rain");
+        
 
         }
         else if (data.weather[0].main == "Drizzle") {
